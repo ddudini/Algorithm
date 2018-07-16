@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  boj_n1197
+//  boj_n1922
 //
 //  Created by Sujin Han on 2018. 7. 16..
 //  Copyright © 2018년 ddudini. All rights reserved.
