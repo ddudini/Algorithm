@@ -1,36 +1,28 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
+//  boj_n2309
+//  https://www.acmicpc.net/problem/2309
 
+#include <iostream>
 using namespace std;
 
-
-int man[9];
-vector <int> man2;
-
-int dfs(int idx, int sum){
-    if(idx >= 9){
-        if(sum == 100) return sum;
-        else return -1;
-    }
-
-    dfs(idx+1, sum);
-    man2.push_back(idx);
-    dfs(idx+1, sum + man[idx]);
-   
-}
-int main(){
-    int man[9];
-    for(int i=0; i<9; i++){
-        cin >> man[i];
-    }
+int main(int argc, const char * argv[]) {
     
-    sort(man, man+9);
+    int E, S, M;
 
-    int ans = dfs(0, 0);
-    for(int i=0 ; i < man2.size(); i++){
-        cout << man2[i];
-    }
+    cin >> E >> S >> M;
     
-
+    int e, s, m;
+    e=s=m=1;
+    int y  = 0;
+    
+    while(++y){
+        if(E == e && S == s && M == m){
+            cout << y << endl;
+            break;
+        }
+        
+        e = (e % 15) + 1;
+        s = (s % 28) + 1;
+        m = (m % 19) + 1;
+    }
+    return 0;
 }
